@@ -30,6 +30,8 @@ public:
 std::ostream& operator<<(std::ostream&, const Element&);
 //std::istream& operator>>(std::istream&, Element&);
 
+//MOIKKA IIDAMAIJAAA! :))
+
 
 
 #endif //ET3_ELEMENT_H
