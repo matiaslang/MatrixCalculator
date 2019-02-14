@@ -3,7 +3,7 @@
 //
 #include "CompositeElement.h"
 
-CompositeElement::CompositeElement(const Element &e1, const Element &e2, const std::function<int(int, int)> &op, char &opc){
+CompositeElement::CompositeElement(const Element &e1, const Element &e2, const CEFFunction &op, char &opc){
     opmd1 = e1.clone();
     opmd2 = e2.clone();
     op_fun = op;
@@ -23,7 +23,7 @@ CompositeElement& CompositeElement::operator=(const CompositeElement &e){
     return *this;
 }
 std::unique_ptr<Element> CompositeElement::clone() const {
-        return std::unique_ptr<Element>(new CompositeElement(*this));
+    return nullptr;
 }
 
 std::string CompositeElement::toString() const {
@@ -33,5 +33,5 @@ std::string CompositeElement::toString() const {
 }
 
 int CompositeElement::evaluate(const Valuation &val) const {
-    //TODO CompositeElement evaluate
+    return op_fun(opmd1->evaluate(val),opmd2->evaluate(val));
 }
