@@ -25,6 +25,9 @@ public:
     SymbolicSquareMatrix& operator=(const SymbolicSquareMatrix &m);
     SymbolicSquareMatrix& operator=(SymbolicSquareMatrix &&m) noexcept;
     SymbolicSquareMatrix transpose() const;
+    SymbolicSquareMatrix operator+(const SymbolicSquareMatrix& m);
+    SymbolicSquareMatrix operator-(const SymbolicSquareMatrix& m);
+    SymbolicSquareMatrix operator*(const SymbolicSquareMatrix& m);
     bool operator==(const SymbolicSquareMatrix &m) const;
     void print(std::ostream &os) const;
     std::string toString() const;

@@ -235,3 +235,17 @@ std::ostream& operator<<(std::ostream& os, const SymbolicSquareMatrix& m){
     os << m.toString();
     return os;
 }
+
+SymbolicSquareMatrix SymbolicSquareMatrix::operator+(const SymbolicSquareMatrix &m) {
+    //TODO Symbolic squareMatrix operator+
+}
+
+
+SymbolicSquareMatrix SymbolicSquareMatrix::operator-(const SymbolicSquareMatrix &m) {
+    //TODO Symbolic squareMatrix operator-
+}
+
+
+SymbolicSquareMatrix SymbolicSquareMatrix::operator*(const SymbolicSquareMatrix &m) {
+    //TODO Symbolic squareMatrix operator*
+}

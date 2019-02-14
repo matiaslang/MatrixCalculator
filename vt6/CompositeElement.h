@@ -9,12 +9,13 @@
 
 #include "Element.h"
 #include "Valuation.h"
+#include <sstream>
 
 
 class CompositeElement : public Element{
 public:
     CompositeElement(const Element &e1, const Element &e2, const std::function<int(int,int)> &op, char &opc);
-    CompositeElement(const CompositeElement &e) = default;
+    CompositeElement(const CompositeElement &e);
     CompositeElement &operator=(const CompositeElement &e);
     ~CompositeElement()= default;
     std::unique_ptr<Element> clone() const final;

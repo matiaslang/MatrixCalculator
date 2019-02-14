@@ -16,14 +16,18 @@ CompositeElement::CompositeElement(const CompositeElement &e) {
     this->op_ch = e.op_ch;
 }
 CompositeElement& CompositeElement::operator=(const CompositeElement &e){
-
+//TODO compositeElement operator=
 }
 std::unique_ptr<Element> CompositeElement::clone() const {
         return std::unique_ptr<Element>(new CompositeElement(*this));
 }
 
 std::string CompositeElement::toString() const {
-    return '(' + &opmd1->toString() + op_ch + opmd2->toString() + ')';
+    std::stringstream ss;
+    ss << '(' << opmd1->toString() << op_ch << opmd2->toString() << ')';
+    return ss.str();
 }
 
-int CompositeElement::evaluate(const Valuation &val) const {}
+int CompositeElement::evaluate(const Valuation &val) const {
+    //TODO CompositeElement evaluate
+}
