@@ -11,6 +11,8 @@
 #include "Valuation.h"
 #include <sstream>
 
+using CEFFunction = std::function<int(int,int)>;
+
 
 class CompositeElement : public Element{
 public:
@@ -22,12 +24,13 @@ public:
     std::string toString() const final;
     int evaluate(const Valuation &val) const final;
 
+
 private:
     //Element* oprnd1;
     std::unique_ptr<Element> opmd1;
     // Element* oprnd2;
     std::unique_ptr<Element> opmd2;
-    std::function<int(int, int)> op_fun;
+    CEFFunction op_fun;
     char op_ch;
 };
 
