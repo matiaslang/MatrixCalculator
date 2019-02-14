@@ -16,7 +16,11 @@ CompositeElement::CompositeElement(const CompositeElement &e) {
     this->op_ch = e.op_ch;
 }
 CompositeElement& CompositeElement::operator=(const CompositeElement &e){
-//TODO compositeElement operator=
+    if (this != &e) {
+        CompositeElement temp{e};
+        std::swap(*this, temp);
+    }
+    return *this;
 }
 std::unique_ptr<Element> CompositeElement::clone() const {
         return std::unique_ptr<Element>(new CompositeElement(*this));
