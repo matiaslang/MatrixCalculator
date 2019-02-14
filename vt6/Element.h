@@ -30,7 +30,6 @@ public:
 std::ostream& operator<<(std::ostream&, const Element&);
 //std::istream& operator>>(std::istream&, Element&);
 
-//IIDAMAIJAN TESTAUSTA! :)=))
 
 
 

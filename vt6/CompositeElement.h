@@ -16,7 +16,7 @@ using CEFFunction = std::function<int(int,int)>;
 
 class CompositeElement : public Element{
 public:
-    CompositeElement(const Element &e1, const Element &e2, const std::function<int(int,int)> &op, char &opc);
+    CompositeElement(const Element &e1, const Element &e2, const CEFFunction &op, char &opc);
     CompositeElement(const CompositeElement &e);
     CompositeElement &operator=(const CompositeElement &e);
     ~CompositeElement()= default;
